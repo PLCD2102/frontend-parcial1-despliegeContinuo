@@ -32,6 +32,10 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i ec2_key ${EC2_USER}@${SERVER_IP} << 'EOF'
               # Acceder al directorio del proyecto
               cd /var/www/html && ls &&
+              
+              git fetch --all &&
+              git reset --hard origin/master &&
+              git pull origin master &&
 
               # Activar el entorno virtual
               sudo systemctl start apache2
