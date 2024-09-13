@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gestión de Usuarios</h1>
+
+    <!-- Sección para registrar un nuevo usuario -->
+    <div class="register-form">
+        <h2>Registrar Nuevo Usuario</h2>
+        <form id="registerForm">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" required><br>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required><br>
+
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+
+    <!-- Sección para mostrar la lista de usuarios -->
+    <div class="users-list">
+        <h2>Lista de Usuarios</h2>
+        <ul id="users"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
